@@ -4,18 +4,18 @@ export default {
     extend: {
       colors: {
 
-        'purple-50': '#faf5ff',
-        'purple-100': '#f4e8ff',
-        'purple-200': '#ebd5ff',
-        'purple-300': '#dbb4fe',
-        'purple-400': '#c384fc',
-        'purple-500': '#aa55f7',
-        'purple-600': '#9333ea',
-        'purple-700': '#7c22ce',
-        'purple-800': '#6821a8',
-        'purple-900': '#541c87',
-        'purple-950': '#380764',
-        'purple': '#9333ea', 
+        'orange-50': '#fff7ed',
+        'orange-100': '#ffedd5',
+        'orange-200': '#fed7aa',
+        'orange-300': '#fdba74',
+        'orange-400': '#fb923c',
+        'orange-500': '#f97316',
+        'orange-600': '#ea580c',
+        'orange-700': '#c2410c',
+        'orange-800': '#9a3412',
+        'orange-900': '#7c2d12',
+        'orange-950': '#431407',
+        'orange': '#ea580c',
 
         'green-50': '#eeffef',
         'green-100': '#d7ffdd',
@@ -28,7 +28,7 @@ export default {
         'green-800': '#0b7019',
         'green-900': '#0b5c18',
         'green-950': '#003409',
-        'green': '#0bdd27', 
+        'green': '#02b71b', 
         
      
         'dark': '#0a0a0a',  

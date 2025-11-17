@@ -7,7 +7,7 @@ const projectsCollection = defineCollection({
     subtitle: z.string(),
     description: z.string(),
     pubDate: z.date(),
-    tags: z.array(z.string()),
+    tags: z.array(z.string()).optional(),
     github: z.string().url().optional(),
   }),
 });
