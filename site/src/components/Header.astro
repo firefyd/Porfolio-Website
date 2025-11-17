@@ -1,0 +1,33 @@
+---
+const navLinks = [
+  { name: 'Home', href: '/' },
+  { name: 'Projects', href: '/projects' },
+  { name: 'About', href: '/about' },
+  { name: 'Contact', href: '/contact' },
+];
+---
+
+<header class="bg-dark-secondary border-b border-dark-tertiary">
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo/Name -->
+      <a href="/" class="text-xl font-bold text-light hover:text-purple transition">
+        Joshua Phillips
+      </a>
+      
+      <!-- Navigation Links -->
+      <ul class="flex gap-8">
+        {navLinks.map((link) => (
+          <li>
+            <a 
+              href={link.href}
+              class="text-light-secondary hover:text-light transition"
+            >
+              {link.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </nav>
+</header>

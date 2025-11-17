@@ -1,0 +1,34 @@
+---
+const currentYear = new Date().getFullYear();
+
+const socialLinks = [
+  { name: 'GitHub', href: 'https://github.com/firefyd', icon: 'github' },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/joshua-phillips-193b52245/', icon: 'linkedin' }
+];
+---
+
+<footer class="bg-dark-secondary border-t border-dark-tertiary mt-auto">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+      <!-- Copyright -->
+      <p class="text-light-secondary text-sm">
+        © {currentYear} Joshua Phillips. All rights reserved.
+      </p>
+      
+      <!-- Social Links -->
+      <div class="flex gap-6">
+        {socialLinks.map((link) => (
+          <a 
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-light-secondary hover:text-purple transition"
+            aria-label={link.name}
+          >
+            {link.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</footer>
