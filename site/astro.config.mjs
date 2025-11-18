@@ -6,8 +6,9 @@ import tailwindcss from '@tailwindcss/vite';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
-// https://astro.build/config
+
 export default defineConfig({
+  site: 'https://firefyd.github.io',
   integrations: [react(), mdx(), sitemap()],
 
   vite: {

@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await project.render();
+---
+
+<BaseLayout 
+  title={`${project.data.title} | Joshua Phillips`}
+  description={project.data.description}
+  type="article"
+>
+  <article class="max-w-4xl mx-auto px-4 py-16">
+    <header class="mb-12">
+      <a 
+        href="/projects" 
+        class="text-orange hover:text-orange-700 transition inline-block mb-6"
+      >
+        ← Back to Projects
+      </a>
+      
+      <h1 class="text-4xl font-bold text-light mb-3">
+        {project.data.title}
+      </h1>
+      
+      <p class="text-xl text-orange mb-4">
+        {project.data.subtitle}
+      </p>
+      
+      <div class="flex items-center gap-4 text-light-secondary text-sm mb-6">
+        <time datetime={project.data.pubDate.toISOString()}>
+          {new Date(project.data.pubDate).toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+          })}
+        </time>
+      </div>
+
+      <div class="flex flex-wrap gap-2 mb-6">
+        {project.data.tags.map((tag) => (
+          <span class="text-sm bg-dark-secondary text-light-secondary px-3 py-1 rounded">
+            {tag}
+          </span>
+        ))}
+      </div>
+
+      {project.data.github && (
+        <a 
+          href={project.data.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-orange hover:bg-orange-700 text-white px-4 py-2 rounded transition"
+        >
+          View on GitHub
+        </a>
+      )}
+    </header>
+
+    <div class="prose prose-invert prose-orange max-w-none">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>
