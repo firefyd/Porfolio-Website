@@ -9,6 +9,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://firefyd.github.io',
+  base: '/PortfolioWebsite',
   integrations: [react(), mdx(), sitemap()],
 
   vite: {
