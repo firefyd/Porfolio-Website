@@ -32,4 +32,32 @@
   --color-light: #fafafa;
   --color-light-secondary: #a3a3a3;
   --color-light-tertiary: #737373;
+
+  --bg-main: var(--color-dark);
+  --bg-secondary: var(--color-dark-secondary);
+  --border-main: var(--color-dark-tertiary);
+  --text-main: var(--color-light);
+  --text-secondary: var(--color-light-secondary);
+  --accent: var(--color-orange-500);
+  --accent-hover: var(--color-orange-400);
+}
+
+:root.light {
+  --bg-main: var(--color-light);
+  --bg-secondary: #ffffff;
+  --border-main: #e5e5e5;
+  --text-main: var(--color-dark);
+  --text-secondary: var(--color-dark-tertiary);
+  --accent: var(--color-green-600);
+  --accent-hover: var(--color-green-500);
+}
+
+@theme {
+  --color-bg-main: var(--bg-main);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-border-main: var(--border-main);
+  --color-text-main: var(--text-main);
+  --color-text-secondary: var(--text-secondary);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
 }

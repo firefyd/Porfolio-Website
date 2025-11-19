@@ -14,15 +14,15 @@ const sortedProjects = allProjects.sort((a, b) =>
 >
   <div class="max-w-6xl mx-auto px-4 py-16">
     <div class="mb-12">
-      <h1 class="text-4xl font-bold text-light mb-4">Projects</h1>
-      <p class="text-xl text-light-secondary">
+      <h1 class="text-4xl font-bold text-text-main mb-4">Projects</h1>
+      <p class="text-xl text-text-secondary">
         A collection of my data science work, showcasing various techniques and technologies.
       </p>
     </div>
 
     {sortedProjects.length === 0 ? (
       <div class="bg-dark-secondary p-12 rounded-lg text-center">
-        <p class="text-light-secondary text-lg">
+        <p class="text-text-secondary text-lg">
           No projects yet. Check back soon!
         </p>
       </div>
@@ -34,13 +34,13 @@ const sortedProjects = allProjects.sort((a, b) =>
             class="bg-dark-secondary p-6 rounded-lg hover:bg-dark-tertiary transition block"
           >
             <div class="mb-4">
-              <h2 class="text-2xl font-semibold text-light mb-2">
+              <h2 class="text-2xl font-semibold text-text-main mb-2">
                 {project.data.title}
               </h2>
-              <p class="text-orange text-sm mb-2">
+              <p class="text-accent text-sm mb-2">
                 {project.data.subtitle}
               </p>
-              <p class="text-light-tertiary text-sm">
+              <p class="text-text-main-tertiary text-sm">
                 {new Date(project.data.pubDate).toLocaleDateString('en-US', { 
                   year: 'numeric', 
                   month: 'long', 
@@ -49,20 +49,20 @@ const sortedProjects = allProjects.sort((a, b) =>
               </p>
             </div>
             
-            <p class="text-light-secondary mb-4">
+            <p class="text-text-secondary mb-4">
               {project.data.description}
             </p>
             
             <div class="flex flex-wrap gap-2 mb-4">
               {project.data.tags.map((tag) => (
-                <span class="text-xs bg-dark-tertiary text-light-secondary px-2 py-1 rounded">
+                <span class="text-xs bg-dark-tertiary text-text-secondary px-2 py-1 rounded">
                   {tag}
                 </span>
               ))}
             </div>
 
             {project.data.github && (
-              <div class="flex items-center gap-2 text-orange text-sm">
+              <div class="flex items-center gap-2 text-accent text-sm">
                 <span>View on GitHub →</span>
               </div>
             )}

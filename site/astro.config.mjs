@@ -1,16 +1,16 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
-
-import react from '@astrojs/react';
+import svelte from '@astrojs/svelte';
 import tailwindcss from '@tailwindcss/vite';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
-
 export default defineConfig({
   site: 'https://firefyd.github.io',
-  integrations: [react(), mdx(), sitemap()],
-
+  integrations: [
+    svelte(),
+    mdx(),
+    sitemap()
+  ],
   vite: {
     plugins: [tailwindcss()]
   }
