@@ -4,8 +4,6 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 
-const BASE_URL = process.env.BASE_URL || '/';
-
 export default defineConfig({
   site: 'https://firefyd.github.io',
   base: '/Porfolio-Website/',
@@ -19,5 +17,8 @@ export default defineConfig({
       config: './tailwind.config.cjs', 
     })
   ],
-
+  vite: {
+    // This tells Vite where to base all assets during the production build
+    base: '/Porfolio-Website/',
+  },
 });
