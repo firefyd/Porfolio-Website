@@ -8,7 +8,7 @@ const BASE_URL = 'Porfolio-Website';
 
 export default defineConfig({
   site: 'https://firefyd.github.io',
-  base: `/${Porfolio-Website}/`,
+  base: `/Porfolio-Website/`,
   outDir: './dist',
   build: {
     assetsPrefix: '/',
