@@ -4,11 +4,11 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 
-const BASE_URL = 'Porfolio-Website';
+const BASE_URL = process.env.BASE_URL || '/';
 
 export default defineConfig({
   site: 'https://firefyd.github.io',
-  base: `/Porfolio-Website/`,
+  base: BASE_URL,
   outDir: './dist',
   build: {
     assetsPrefix: '/',
