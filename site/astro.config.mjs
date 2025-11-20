@@ -9,6 +9,9 @@ const BASE_URL = process.env.BASE_URL || '/';
 export default defineConfig({
   site: 'https://firefyd.github.io',
   base: BASE_URL,
+  build: {
+    assetsPrefix: '/',
+  },
   integrations: [
     svelte(),
     mdx(),
