@@ -20,3 +20,5 @@ Created pages: home projects, about, contact
 SEO setup, meta tages, open graph, twitter card, sitemap, robots.txt
 
 Setup formspree
+
+Added autodetection of user system preference for light dark and use that. 
