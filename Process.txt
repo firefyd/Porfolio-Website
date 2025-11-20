@@ -22,3 +22,5 @@ SEO setup, meta tages, open graph, twitter card, sitemap, robots.txt
 Setup formspree
 
 Added autodetection of user system preference for light dark and use that. 
+
+Implemented GitHub pages requirements in a way that enabled me to keep developing locally.
