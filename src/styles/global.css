@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme Definitions: CSS Variables */
+:root {
+  /* Dark Mode Defaults */
+  --color-bg-main: #0a0a0a;
+  --color-bg-secondary: #171717;
+  --color-text-main: #fafafa;
+  --color-text-secondary: #a3a3a3;
+  --color-accent: #ea580c; /* Default Orange */
+}
+
+.light {
+  /* Light Mode Overrides */
+  --color-bg-main: #fafafa;
+  --color-bg-secondary: #e5e5e5;
+  --color-text-main: #0a0a0a;
+  --color-text-secondary: #737373;
+  --color-accent: #02b71b; /* Default Green */
+}
+
+html {
+  transition: background-color 0.3s, color 0.3s;
+}

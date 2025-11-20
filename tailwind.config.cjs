@@ -1,15 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-
   content: [
     './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
   ],
-  
   theme: {
     extend: {
-
       colors: {
-
+        // Semantic Theme Colors using CSS Variables
+        'bg-main': 'var(--color-bg-main)',
+        'text-main': 'var(--color-text-main)',
+        'text-secondary': 'var(--color-text-secondary)',
+        'accent': 'var(--color-accent)', 
+        'bg-secondary': 'var(--color-bg-secondary)', // Added based on your button class
+        
+        // Raw Color Palette
         'orange-50': '#fff7ed',
         'orange-100': '#ffedd5',
         'orange-200': '#fed7aa',
@@ -22,7 +26,6 @@ module.exports = {
         'orange-900': '#7c2d12',
         'orange-950': '#431407',
         'orange': '#ea580c',
-        
         'green-50': '#eeffef',
         'green-100': '#d7ffdd',
         'green-200': '#b3ffbb',
@@ -35,33 +38,18 @@ module.exports = {
         'green-900': '#0b5c18',
         'green-950': '#003409',
         'green': '#02b71b', 
-        
-
-        'dark': '#0a0a0a',    
-        'dark-secondary': '#171717',
-        'dark-tertiary': '#262626',
-        'light': '#fafafa', 
-        'light-secondary': '#a3a3a3',
-        'light-tertiary': '#737373',
       },
-      
-
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
         mono: ['JetBrains Mono', 'ui-monospace', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
       },
-      
-
       spacing: {
         '128': '32rem',
         '144': '36rem',
       },
-      
-
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
       },
-      
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0', transform: 'translateY(10px)' },
@@ -70,8 +58,6 @@ module.exports = {
       },
     },
   },
-  
-
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
