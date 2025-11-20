@@ -31,7 +31,7 @@ const sortedProjects = allProjects.sort((a, b) =>
         {sortedProjects.map((project) => (
           <a 
             href={`/projects/${project.slug}`}
-            class="bg-dark-secondary p-6 rounded-lg hover:bg-dark-tertiary transition block"
+            class="bg-bg-secondary p-6 rounded-lg hover:bg-border-main transition block"
           >
             <div class="mb-4">
               <h2 class="text-2xl font-semibold text-text-main mb-2">
@@ -55,7 +55,7 @@ const sortedProjects = allProjects.sort((a, b) =>
             
             <div class="flex flex-wrap gap-2 mb-4">
               {project.data.tags.map((tag) => (
-                <span class="text-xs bg-dark-tertiary text-text-secondary px-2 py-1 rounded">
+                <span class="text-xs bg-border-main text-text-secondary px-2 py-1 rounded">
                   {tag}
                 </span>
               ))}

@@ -23,7 +23,7 @@ const { Content } = await project.render();
     <header class="mb-12">
       <a 
         href="/projects" 
-        class="text-accent hover:text-accent-700 transition inline-block mb-6"
+        class="text-accent hover:text-accent-hover transition inline-block mb-6"
       >
         ← Back to Projects
       </a>
@@ -48,7 +48,7 @@ const { Content } = await project.render();
 
       <div class="flex flex-wrap gap-2 mb-6">
         {project.data.tags.map((tag) => (
-          <span class="text-sm bg-dark-secondary text-text-main-secondary px-3 py-1 rounded">
+          <span class="text-sm bg-bg-secondary text-text-main-secondary px-3 py-1 rounded">
             {tag}
           </span>
         ))}
@@ -59,7 +59,7 @@ const { Content } = await project.render();
           href={project.data.github}
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 bg-orange hover:bg-orange-700 text-text-main px-4 py-2 rounded transition"
+          class="inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-text-main px-4 py-2 rounded transition"
         >
           View on GitHub
         </a>

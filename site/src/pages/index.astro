@@ -24,7 +24,7 @@ const featuredProjects = allProjects.slice(0, 3);
       <div class="flex gap-4">
         <a 
           href="/projects" 
-          class="bg-orange hover:bg-orange-700 text-text-main px-6 py-3 rounded transition font-medium"
+          class="bg-orange hover:bg-accent-hover text-text-main px-6 py-3 rounded transition font-medium"
         >
           My Work
         </a>
@@ -39,7 +39,7 @@ const featuredProjects = allProjects.slice(0, 3);
 
     <section class="mb-24">
       <h2 class="text-3xl font-bold text-text-main mb-8">About Me</h2>
-      <div class="bg-dark-secondary p-8 rounded-lg">
+      <div class="border border-border-main p-8 rounded-lg">
         <p class="text-text-main-secondary text-lg leading-relaxed mb-4">
           It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
         </p>
@@ -55,7 +55,7 @@ const featuredProjects = allProjects.slice(0, 3);
           <h2 class="text-3xl font-bold text-text-main">Featured Projects</h2>
           <a 
             href="/projects" 
-            class="text-accent hover:text-accent-hover-700 transition font-medium"
+            class="text-accent hover:text-accent-hover transition font-medium"
           >
             View All →
           </a>
@@ -65,7 +65,7 @@ const featuredProjects = allProjects.slice(0, 3);
           {featuredProjects.map((project) => (
             <a 
               href={`/projects/${project.slug}`}
-              class="bg-dark-secondary p-6 rounded-lg hover:bg-dark-tertiary transition block"
+              class="bg-bg-secondary p-6 rounded-lg hover:bg-border-main transition block"
             >
               <h3 class="text-xl font-semibold text-text-main mb-2">
                 {project.data.title}
@@ -78,7 +78,7 @@ const featuredProjects = allProjects.slice(0, 3);
               </p>
               <div class="flex flex-wrap gap-2">
                 {project.data.tags.map((tag) => (
-                  <span class="text-xs bg-dark-tertiary text-text-main-secondary px-2 py-1 rounded">
+                  <span class="text-xs bg-border-main text-text-secondary px-2 py-1 rounded">
                     {tag}
                   </span>
                 ))}
