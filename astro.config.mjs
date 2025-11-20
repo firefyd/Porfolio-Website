@@ -18,7 +18,7 @@ export default defineConfig({
     })
   ],
   vite: {
-    // This tells Vite where to base all assets during the production build
+
     base: '/Porfolio-Website/',
   },
 });
