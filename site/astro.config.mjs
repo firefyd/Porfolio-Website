@@ -4,9 +4,11 @@ import tailwindcss from '@tailwindcss/vite';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
+const BASE_URL = process.env.BASE_URL || '/';
+
 export default defineConfig({
   site: 'https://firefyd.github.io',
-  base: '/Portfolio-Website',
+  base: BASE_URL,
   integrations: [
     svelte(),
     mdx(),
