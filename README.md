@@ -31,5 +31,5 @@ Fixing issue where css works locally but not on github pages.
 
 Added tracking with cloudflare web analytics, may later expand with google web analytics 4 or placing references to it on the website itself.
 
-Updated header with mobile width burger menu and WCAG compliance. 
+Updated header with mobile with burger menu and WCAG compliance. 
 
