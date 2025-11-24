@@ -28,3 +28,5 @@ Added autodetection of user system preference for light dark and use that.
 Implemented GitHub pages requirements in a way that enabled me to keep developing locally.
 
 Fixing issue where css works locally but not on github pages.
+
+Added tracking with cloudflare web analytics, may later expand with google web analytics 4.
