@@ -1,18 +1,18 @@
 ---
 interface Props {
-  title: string;
-  description: string;
-  type?: 'website' | 'article';
-  image?: string;
-  url?: string;
+	title: string;
+	description: string;
+	type?: "website" | "article";
+	image?: string;
+	url?: string;
 }
 
 const {
-  title,
-  description,
-  type = 'website',
-  image = '/og-image.jpg',
-  url = Astro.url.pathname,
+	title,
+	description,
+	type = "website",
+	image = "/og-image.jpg",
+	url = Astro.url.pathname,
 } = Astro.props;
 
 const canonicalURL = new URL(url, Astro.site);

@@ -1,74 +1,63 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
-const allProjects = await getCollection('projects');
-const sortedProjects = allProjects.sort((a, b) => 
-  b.data.pubDate.getTime() - a.data.pubDate.getTime()
+const allProjects = await getCollection("projects");
+const sortedProjects = allProjects.sort(
+	(a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
 );
 ---
 
-<BaseLayout 
-  title="Projects | Joshua Phillips" 
-  description="My data science projects."
->
-  <div class="max-w-6xl mx-auto px-4 py-16">
-    <div class="mb-12">
-      <h1 class="text-4xl font-bold text-text-main mb-4">Projects</h1>
-      <p class="text-xl text-text-secondary">
-        A collection of my work.
-      </p>
-    </div>
+<BaseLayout title="Projects | Joshua Phillips" description="My data science projects.">
+	<div class="max-w-6xl mx-auto px-4 py-16">
+		<div class="mb-12">
+			<h1 class="text-4xl font-bold text-text-main mb-4">Projects</h1>
+			<p class="text-xl text-text-secondary">A collection of my work.</p>
+		</div>
 
-    {sortedProjects.length === 0 ? (
-      <div class="bg-dark-secondary p-12 rounded-lg text-center">
-        <p class="text-text-secondary text-lg">
-          No projects found.
-        </p>
-      </div>
-    ) : (
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {sortedProjects.map((project) => (
-          <a 
-            href={`/projects/${project.slug}`}
-            class="bg-bg-secondary p-6 rounded-lg hover:bg-border-main transition block"
-          >
-            <div class="mb-4">
-              <h2 class="text-2xl font-semibold text-text-main mb-2">
-                {project.data.title}
-              </h2>
-              <p class="text-accent text-sm mb-2">
-                {project.data.subtitle}
-              </p>
-              <p class="text-text-main-tertiary text-sm">
-                {new Date(project.data.pubDate).toLocaleDateString('en-US', { 
-                  year: 'numeric', 
-                  month: 'long', 
-                  day: 'numeric' 
-                })}
-              </p>
-            </div>
-            
-            <p class="text-text-secondary mb-4">
-              {project.data.description}
-            </p>
-            
-            <div class="flex flex-wrap gap-2 mb-4">
-              {project.data.tags.map((tag) => (
-                <span class="text-xs bg-border-main text-text-secondary px-2 py-1 rounded">
-                  {tag}
-                </span>
-              ))}
-            </div>
+		{
+			sortedProjects.length === 0 ? (
+				<div class="bg-dark-secondary p-12 rounded-lg text-center">
+					<p class="text-text-secondary text-lg">No projects found.</p>
+				</div>
+			) : (
+				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+					{sortedProjects.map((project) => (
+						<a
+							href={`/projects/${project.slug}`}
+							class="bg-bg-secondary p-6 rounded-lg hover:bg-border-main transition block"
+						>
+							<div class="mb-4">
+								<h2 class="text-2xl font-semibold text-text-main mb-2">{project.data.title}</h2>
+								<p class="text-accent text-sm mb-2">{project.data.subtitle}</p>
+								<p class="text-text-main-tertiary text-sm">
+									{new Date(project.data.pubDate).toLocaleDateString("en-US", {
+										year: "numeric",
+										month: "long",
+										day: "numeric",
+									})}
+								</p>
+							</div>
 
-            {project.data.github && (
-              <div class="flex items-center gap-2 text-accent text-sm">
-                <span>View on GitHub →</span>
-              </div>
-            )}
-          </a>
-        ))}
-      </div>
-    )}
-  </div>
+							<p class="text-text-secondary mb-4">{project.data.description}</p>
+
+							<div class="flex flex-wrap gap-2 mb-4">
+								{project.data.tags.map((tag) => (
+									<span class="text-xs bg-border-main text-text-secondary px-2 py-1 rounded">
+										{tag}
+									</span>
+								))}
+							</div>
+
+							{project.data.github && (
+								<div class="flex items-center gap-2 text-accent text-sm">
+									<span>View on GitHub →</span>
+								</div>
+							)}
+						</a>
+					))}
+				</div>
+			)
+		}
+	</div>
 </BaseLayout>
