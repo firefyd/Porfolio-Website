@@ -36,3 +36,5 @@ Updated header with mobile with burger menu and WCAG compliance.
 Updated contact form to a svelte component, added a loading state to sending and a success error message, added a field to filger out bots.
 
 Added prettier file to consistently format code.
+
+Custom domain setup and dns configuration.

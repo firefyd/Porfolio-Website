@@ -5,8 +5,8 @@ import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-	site: "https://firefyd.github.io",
-	base: "/Porfolio-Website/",
+	site: "https://joshphillips.dev/",
+	base: "/",
 	outDir: "./dist",
 	integrations: [
 		svelte(),
