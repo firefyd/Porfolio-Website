@@ -1,35 +1,22 @@
 ---
-import ThemeToggle from './ThemeToggle.svelte';
+import Navigation from './Navigation.svelte';
 
 const navLinks = [
-  { name: 'Home', href: '/' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'About', href: '/about' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'Home', href: '/' },
+  { name: 'Projects', href: '/projects' },
+  { name: 'About', href: '/about' },
+  { name: 'Contact', href: '/contact' },
 ];
 ---
 
-<header class="bg-bg-secondary border-t border-border-main mt-auto">
-  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
-      <!-- Logo/Name -->
-      <a href="/" class="text-xl font-bold text-text-main hover:text-accent-hover transition">
-        Joshua Phillips
-      </a>
-      
-      <!-- Navigation Links -->
-      <ul class="flex gap-8">
-        {navLinks.map((link) => (
-          <li>
-            <a 
-              href={link.href}
-              class="text-text-secondary hover:text-text-main transition"
-            >
-              {link.name}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </nav>
+<header class="sticky top-0 z-50 bg-bg-secondary border-b border-text-secondary/20 shadow-md">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+            <a href="/" class="text-xl font-bold text-text-main hover:text-accent transition z-50">
+        Joshua Phillips
+      </a>
+      
+            <Navigation client:load navLinks={navLinks} />
+    </div>
+  </div>
 </header>
