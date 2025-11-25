@@ -17,6 +17,14 @@ const {
 
 const canonicalURL = new URL(url, Astro.site);
 const socialImageURL = new URL(image, Astro.site);
+const siteName = "Joshua Phillips | Data Science Portfolio";
+const authorSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Joshua Phillips",
+    "url": Astro.site.href,
+    "jobTitle": "Data Scientist",
+};
 ---
 
 <meta charset="UTF-8" />
@@ -41,3 +49,5 @@ const socialImageURL = new URL(image, Astro.site);
 
 <meta name="robots" content="index, follow" />
 <meta name="author" content="Joshua Phillips" />
+
+<script type="application/ld+json" set:html={JSON.stringify(authorSchema)} />

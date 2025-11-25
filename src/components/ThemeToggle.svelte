@@ -23,7 +23,7 @@
 
 <button
 	on:click={toggleTheme}
-	class="p-2 rounded-md hover:bg-bg-secondary text-text-secondary hover:text-accent transition-colors cursor-pointer"
+	class="p-2 rounded-md hover:bg-bg-secondary text-text-secondary hover:text-accent transition-colors cursor-pointer focus-visible-ring"
 	aria-label="Toggle theme"
 >
 	{#if isDark}

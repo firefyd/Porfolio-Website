@@ -6,7 +6,7 @@ const allProjects = await getCollection("projects");
 const featuredProjects = allProjects.slice(0, 3);
 ---
 
-<BaseLayout title="Joshua Phillips | Data Science Portfolio">
+<BaseLayout title="Joshua Phillips">
 	<div class="max-w-6xl mx-auto px-4 py-16">
 		<section class="mb-24">
 			<h1 class="text-5xl font-bold text-text-main mb-4">Joshua Phillips</h1>
@@ -20,14 +20,14 @@ const featuredProjects = allProjects.slice(0, 3);
 			<div class="flex gap-4">
 				<a
 					href="/projects"
-					class="bg-accent hover:bg-orange-700 text-white px-6 py-3 rounded transition font-medium"
+					class="bg-accent hover:bg-orange-700 text-white px-6 py-3 rounded transition font-medium focus-visible-ring"
 				>
 					My Work
 				</a>
 
 				<a
 					href="/contact"
-					class="border border-accent text-accent hover:bg-accent hover:text-bg-main px-6 py-3 rounded transition font-medium"
+					class="border border-accent text-accent hover:bg-accent hover:text-bg-main px-6 py-3 rounded transition font-medium focus-visible-ring"
 				>
 					Contact
 				</a>

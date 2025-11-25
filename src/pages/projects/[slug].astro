@@ -21,8 +21,8 @@ const { Content } = await project.render();
 >
 	<article class="max-w-4xl mx-auto px-4 py-16">
 		<header class="mb-12">
-			<a href="/projects" class="text-accent hover:text-accent-hover transition inline-block mb-6">
-				← Back to Projects
+			<a href="/projects" class="text-accent hover:text-accent-hover transition inline-block mb-6 focus-visible-ring">
+				Back to Projects
 			</a>
 
 			<h1 class="text-4xl font-bold text-text-main mb-3">
@@ -61,7 +61,7 @@ const { Content } = await project.render();
 						href={project.data.github}
 						target="_blank"
 						rel="noopener noreferrer"
-						class="inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-text-main px-4 py-2 rounded transition"
+						class="inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-text-main px-4 py-2 rounded transition focus-visible-ring"
 					>
 						View on GitHub
 					</a>

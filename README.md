@@ -38,3 +38,7 @@ Updated contact form to a svelte component, added a loading state to sending and
 Added prettier file to consistently format code.
 
 Custom domain setup and dns configuration.
+
+Using sharp for image handling.
+
+Added custom browser focus ring matching dark/light themes.

@@ -75,7 +75,7 @@
 			name="name"
 			required
 			bind:value={name}
-			class="w-full px-4 py-2 bg-bg-secondary border border-border-main rounded text-text-main focus:outline-none focus:border-accent transition"
+			class="w-full px-4 py-2 bg-bg-secondary border border-border-main rounded text-text-main focus:outline-none focus-visible-ring transition"
 			disabled={loading || success}
 		/>
 	</div>
@@ -88,7 +88,7 @@
 			name="email"
 			required
 			bind:value={email}
-			class="w-full px-4 py-2 bg-bg-secondary border border-border-main rounded text-text-main focus:outline-none focus:border-accent transition"
+			class="w-full px-4 py-2 bg-bg-secondary border border-border-main rounded text-text-main focus:outline-none focus-visible-ring transition"
 			disabled={loading || success}
 		/>
 	</div>
@@ -101,7 +101,7 @@
 			name="subject"
 			required
 			bind:value={subject}
-			class="w-full px-4 py-2 bg-bg-secondary border border-border-main rounded text-text-main focus:outline-none focus:border-accent transition"
+			class="w-full px-4 py-2 bg-bg-secondary border border-border-main rounded text-text-main focus:outline-none focus-visible-ring transition"
 			disabled={loading || success}
 		/>
 	</div>
@@ -114,14 +114,14 @@
 			rows="5"
 			required
 			bind:value={message}
-			class="w-full px-4 py-2 bg-bg-secondary border border-border-main rounded text-text-main focus:outline-none focus:border-accent transition resize-none"
+			class="w-full px-4 py-2 bg-bg-secondary border border-border-main rounded text-text-main focus:outline-none focus-visible-ring transition resize-none"
 			disabled={loading || success}
 		></textarea>
 	</div>
 
 	<button
 		type="submit"
-		class="w-full bg-accent hover:bg-orange-700 text-white px-6 py-3 rounded transition font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+		class="w-full bg-accent hover:bg-orange-700 text-white px-6 py-3 rounded transition font-medium disabled:opacity-50 disabled:cursor-not-allowed focus-visible-ring"
 		disabled={loading || success}
 	>
 		{#if loading}
