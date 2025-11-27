@@ -27,7 +27,7 @@ jobs:
 
       - name: Build Astro site
         env:
-            ASTRO_PUBLIC_FORMSPREE_URL: ${{ secrets.ASTRO_PUBLIC_FORMSPREE_URL }}
+          ASTRO_PUBLIC_FORMSPREE_URL: ${{ secrets.ASTRO_PUBLIC_FORMSPREE_URL }}
         run: npm run build
 
       - name: Deploy to GitHub Pages
