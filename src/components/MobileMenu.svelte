@@ -32,12 +32,14 @@
     aria-expanded={isOpen}
 >
     {#if isOpen}
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        <svg in:fade={{duration: 150}} out:fade={{duration: 150}} 
+             xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 absolute" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
     {:else}
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        <svg in:fade={{duration: 150}} out:fade={{duration: 150}} 
+             xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 absolute" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
     {/if}
 </button>
@@ -63,14 +65,13 @@
 {/if}
 
 <style>
-    /* We use the same CSS variables defined in your global styles for theme awareness */
+
     .active-link {
         /* Mobile Bubble: Secondary background fill + Accent Text */
         background-color: var(--color-bg-secondary);
         color: var(--color-accent);
     }
 
-    /* Inactive Link Styling (High contrast, subtle hover) */
     nav a:not(.active-link) {
         color: var(--color-text-main);
     }
