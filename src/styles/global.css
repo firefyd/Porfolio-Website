@@ -45,8 +45,8 @@ root .shadow-card {
 }
 
 .hover-lift-glow {
-
     transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
+	transform: translateZ(0);
 }
 
 .hover-lift-glow:hover,
@@ -66,6 +66,7 @@ root .shadow-card {
 
 .btn-interactive {
     transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+	transform: translateZ(0);
 }
 
 .btn-interactive:hover,
@@ -80,7 +81,6 @@ root .shadow-card {
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05); 
 }
 
-/* Active (Click/Press) State */
 .btn-interactive:active {
     transform: translateY(1px) scale(0.98); 
     box-shadow: none; 
