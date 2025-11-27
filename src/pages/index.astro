@@ -53,7 +53,7 @@ const featuredProjects = allProjects.slice(0, 3);
 						{featuredProjects.map((project) => (
 							<a
 								href={`/projects/${project.slug}`}
-								class="bg-bg-secondary p-6 rounded-lg shadow-card hover:bg-border-main transition block"
+								class="bg-bg-secondary p-6 rounded-lg shadow-card hover-lift-glow hover:bg-border-main transition block"
 							>
 								<h3 class="text-xl font-semibold text-text-main mb-2">{project.data.title}</h3>
 								<p class="text-accent text-sm mb-3">{project.data.subtitle}</p>
