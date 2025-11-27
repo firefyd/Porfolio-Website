@@ -50,14 +50,14 @@
 {#if success}
 	<div
 		in:fly={{ y: -10, duration: 500 }}
-		class="bg-green-600/20 border border-green-600 text-green-100 p-4 rounded mb-4"
+		class="bg-[var(--color-bg-secondary)] border-l-4 border-[var(--color-accent)] text-text-main p-4 rounded mb-4 shadow-md"
 	>
 		<p class="font-medium">Message sent successfully!</p>
 	</div>
 {:else if error}
 	<div
 		in:fly={{ y: -10, duration: 500 }}
-		class="bg-orange-600/20 border border-orange-600 text-orange-100 p-4 rounded mb-4"
+		class="bg-[var(--color-bg-secondary)] border-l-4 border-[var(--color-accent)] text-text-main p-4 rounded mb-4 shadow-md"
 	>
 		<p class="font-medium">
 			Something went wrong. Please try again or contact me directly via LinkedIn.
@@ -66,7 +66,9 @@
 {/if}
 
 <form id="contact-form" on:submit|preventDefault={handleSubmit} class="space-y-4">
+	<!-- Honeypot Field -->
 	<input type="text" name="_gotcha" class="hidden" aria-hidden="true" />
+	
 	<div>
 		<label for="name" class="block text-text-main mb-2">Name</label>
 		<input
@@ -121,7 +123,7 @@
 
 	<button
 		type="submit"
-		class="w-full bg-accent hover:bg-orange-700 text-white px-6 py-3 rounded transition font-medium disabled:opacity-50 disabled:cursor-not-allowed focus-visible-ring"
+		class="w-full bg-accent hover:bg-accent-hover text-white px-6 py-3 rounded transition font-medium disabled:opacity-50 disabled:cursor-not-allowed focus-visible-ring"
 		disabled={loading || success}
 	>
 		{#if loading}

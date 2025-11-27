@@ -33,7 +33,7 @@ const { Content } = await project.render();
 				{project.data.subtitle}
 			</p>
 
-			<div class="flex items-center gap-4 text-text-main-secondary text-sm mb-6">
+			<div class="flex items-center gap-4 text-text-secondary text-sm mb-6">
 				<time datetime={project.data.pubDate.toISOString()}>
 					{
 						new Date(project.data.pubDate).toLocaleDateString("en-US", {
@@ -48,7 +48,7 @@ const { Content } = await project.render();
 			<div class="flex flex-wrap gap-2 mb-6">
 				{
 					project.data.tags.map((tag) => (
-						<span class="text-sm bg-bg-secondary text-text-main-secondary px-3 py-1 rounded">
+						<span class="text-sm bg-bg-secondary text-text-secondary px-3 py-1 rounded">
 							{tag}
 						</span>
 					))
@@ -61,7 +61,7 @@ const { Content } = await project.render();
 						href={project.data.github}
 						target="_blank"
 						rel="noopener noreferrer"
-						class="inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-text-main px-4 py-2 rounded transition focus-visible-ring"
+						class="inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-white px-4 py-2 rounded transition focus-visible-ring"
 					>
 						View on GitHub
 					</a>
@@ -69,7 +69,8 @@ const { Content } = await project.render();
 			}
 		</header>
 
-		<div class="prose prose-invert prose-orange max-w-none">
+		<!-- FIX: The text and theme inversion is now controlled by the 'dark' parent class. -->
+		<div class="prose max-w-none dark:prose-invert">
 			<Content />
 		</div>
 	</article>
