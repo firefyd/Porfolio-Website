@@ -64,5 +64,25 @@ root .shadow-card {
         0 0 0 3px var(--color-accent); 
 }
 
+.btn-interactive {
+    transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+}
 
+.btn-interactive:hover,
+.btn-interactive:focus-visible {
+    transform: scale(1.01);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+:root .btn-interactive:hover,
+:root .btn-interactive:focus-visible {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05); 
+}
+
+/* Active (Click/Press) State */
+.btn-interactive:active {
+    transform: translateY(1px) scale(0.98); 
+    box-shadow: none; 
+}
 @tailwind utilities;

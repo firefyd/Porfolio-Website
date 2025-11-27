@@ -123,7 +123,7 @@
 
 	<button
 		type="submit"
-		class="w-full bg-accent hover:bg-accent-hover text-white px-6 py-3 rounded transition font-medium disabled:opacity-50 disabled:cursor-not-allowed focus-visible-ring"
+		class="border border-accent text-accent hover:bg-accent hover:text-bg-main px-6 py-3 rounded transition font-medium focus-visible-ring btn-interactive"
 		disabled={loading || success}
 	>
 		{#if loading}
