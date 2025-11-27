@@ -10,7 +10,7 @@
 	let success = false;
 	let error = false;
 
-	const formUrl = "https://formspree.io/f/myzogoqj";
+	const formUrl = import.meta.env.ASTRO_PUBLIC_FORMSPREE_URL;
 
 	async function handleSubmit() {
 		if (loading || success) return;

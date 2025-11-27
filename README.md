@@ -42,3 +42,5 @@ Custom domain setup and dns configuration.
 Using sharp for image handling.
 
 Added custom browser focus ring matching dark/light themes.
+
+Setup .env to ensure private key remains private.
