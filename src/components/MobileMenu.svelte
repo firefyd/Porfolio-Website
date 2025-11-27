@@ -45,7 +45,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
     {/if}
-
+</button>
 {#if isOpen}
     <div 
         class="fixed inset-0 bg-bg-main md:hidden z-50 overflow-y-auto" 
