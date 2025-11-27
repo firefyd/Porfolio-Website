@@ -69,8 +69,9 @@ const { Content } = await project.render();
 			}
 		</header>
 
-		<!-- FIX: The text and theme inversion is now controlled by the 'dark' parent class. -->
-		<div class="prose max-w-none dark:prose-invert">
+		<!-- FIX: Explicitly setting the light mode text color using CSS variable notation.
+               This ensures text is dark on a light background, overriding any unwanted prose defaults. -->
+		<div class="prose max-w-none text-[var(--color-text-main)] dark:prose-invert">
 			<Content />
 		</div>
 	</article>
