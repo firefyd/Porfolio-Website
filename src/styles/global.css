@@ -8,6 +8,7 @@
     --color-text-main: #FFFFFFD9;   
     --color-text-secondary: #9E9E9E;
     --color-accent: #ea580c; 
+	--color-accent-hover: #d24e0b;
 }
 .light {
 	--color-bg-main: #f8fafc;
@@ -15,6 +16,7 @@
 	--color-text-main: #0f172a;
 	--color-text-secondary: #64748b;
 	--color-accent: #02a118;
+	--color-accent-hover: #029014; 
 }
 
 html {
@@ -31,5 +33,16 @@ html {
   outline-offset: 2px;
   border-radius: 4px;
 }
+
+.shadow-card {
+    box-shadow: 
+        0 4px 12px rgba(0, 0, 0, 0.08), 
+        0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+root .shadow-card { 
+    box-shadow: none; 
+}
+
 
 @tailwind utilities;

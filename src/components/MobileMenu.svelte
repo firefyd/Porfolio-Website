@@ -1,6 +1,6 @@
 <script>
     import { quintOut } from 'svelte/easing';
-    import { fly } from 'svelte/transition';
+    import { fly, fade } from 'svelte/transition';
 
     export let navLinks = [];
     export let currentPath = '/';

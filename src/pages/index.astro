@@ -11,7 +11,7 @@ const featuredProjects = allProjects.slice(0, 3);
 		<section class="mb-24">
 			<h1 class="text-5xl font-bold text-text-main mb-4">Joshua Phillips</h1>
 			<p class="text-2xl text-accent mb-6">Data Scientist</p>
-			<p class="text-xl text-text-main-secondary max-w-3xl mb-8">
+			<p class="text-xl text-text-secondary max-w-3xl mb-8">
 				
 
 				I'm Josh, an early career data scientist who believes the true power of data is in what it is used for. <br>
@@ -53,11 +53,11 @@ const featuredProjects = allProjects.slice(0, 3);
 						{featuredProjects.map((project) => (
 							<a
 								href={`/projects/${project.slug}`}
-								class="bg-bg-secondary p-6 rounded-lg hover:bg-border-main transition block"
+								class="bg-bg-secondary p-6 rounded-lg shadow-card hover:bg-border-main transition block"
 							>
 								<h3 class="text-xl font-semibold text-text-main mb-2">{project.data.title}</h3>
 								<p class="text-accent text-sm mb-3">{project.data.subtitle}</p>
-								<p class="text-text-main-secondary mb-4">{project.data.description}</p>
+								<p class="text-text-secondary mb-4">{project.data.description}</p>
 								<div class="flex flex-wrap gap-2">
 									{project.data.tags.map((tag) => (
 										<span class="text-xs bg-border-main text-text-secondary px-2 py-1 rounded">
