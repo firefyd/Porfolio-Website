@@ -1,5 +1,6 @@
 ---
-import Navigation from "./Navigation.svelte";
+import DesktopNavigation from "./DesktopNavigation.astro";
+import MobileMenu from "./MobileMenu.svelte";
 
 const navLinks = [
 	{ name: "Home", href: "/" },
@@ -7,16 +8,26 @@ const navLinks = [
 	{ name: "About", href: "/about" },
 	{ name: "Contact", href: "/contact" },
 ];
+
+const currentPath = Astro.url.pathname;
 ---
 
-<header class="sticky top-0 z-50 bg-bg-secondary border-b border-text-secondary/20 shadow-md">
+<header class="sticky top-0 z-50 bg-bg-main border-b border-border-main shadow-md">
 	<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="flex justify-between items-center h-16">
 			<a href="/" class="text-xl font-bold text-text-main hover:text-accent transition z-50 focus-visible-ring">
 				Joshua Phillips
 			</a>
 
-			<Navigation client:load navLinks={navLinks} />
+			<DesktopNavigation />
+            
+			<div class="md:hidden">
+                <MobileMenu 
+                    client:load 
+                    navLinks={navLinks} 
+                    currentPath={currentPath}
+                />
+            </div>
 		</div>
 	</div>
 </header>

@@ -1,0 +1,38 @@
+---
+const links = [
+    { name: "Home", href: "/" },
+    { name: "Projects", href: "/projects" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
+];
+
+const currentPath = Astro.url.pathname;
+
+const isActive = (href) => {
+
+    if (href === '/') {
+        return currentPath === '/';
+    }
+
+    return currentPath.startsWith(href);
+};
+---
+
+<nav class="hidden md:flex items-center space-x-2 md:space-x-4">
+    {links.map((link) => (
+        <a 
+            href={link.href}
+            class:list={[
+                "px-3 py-2 rounded-lg transition font-medium text-lg focus-visible-ring",
+                {
+
+                    "bg-bg-secondary text-accent hover:bg-bg-secondary": isActive(link.href),
+
+                    "text-text-main hover:text-accent-hover": !isActive(link.href)
+                }
+            ]}
+        >
+            {link.name}
+        </a>
+    ))}
+</nav>
