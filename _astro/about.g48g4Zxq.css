@@ -1,0 +1,1 @@
+.active-link.svelte-2pdber{background-color:var(--color-bg-secondary);color:var(--color-accent)}nav.svelte-2pdber a:where(.svelte-2pdber):not(.active-link){color:var(--color-text-main)}nav.svelte-2pdber a:where(.svelte-2pdber):not(.active-link):hover{color:var(--color-accent)}
