@@ -9,11 +9,9 @@ const links = [
 const currentPath = Astro.url.pathname;
 
 const isActive = (href) => {
-
     if (href === '/') {
         return currentPath === '/';
     }
-
     return currentPath.startsWith(href);
 };
 ---
@@ -23,12 +21,10 @@ const isActive = (href) => {
         <a 
             href={link.href}
             class:list={[
-                "px-3 py-2 rounded-lg transition font-medium text-lg focus-visible-ring",
+                "px-3 py-2 rounded-lg transition font-medium text-lg focus-visible-ring relative",
                 {
-
-                    "bg-bg-secondary text-accent hover:bg-bg-secondary": isActive(link.href),
-
-                    "text-text-main hover:text-accent-hover": !isActive(link.href)
+                    "bg-bg-secondary text-accent": isActive(link.href),
+                    "text-text-secondary hover:text-text-main link-nav-desktop": !isActive(link.href)
                 }
             ]}
         >
@@ -36,3 +32,24 @@ const isActive = (href) => {
         </a>
     ))}
 </nav>
+
+<style>
+    .link-nav-desktop {
+        position: relative;
+    }
+    
+    .link-nav-desktop::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--color-accent);
+        transition: width 0.3s ease;
+    }
+    
+    .link-nav-desktop:hover::after {
+        width: 100%;
+    }
+</style>
