@@ -1,38 +1,37 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 :root {
-    --color-bg-main: #121212;      
+    --color-bg-main: #121212; 
     --color-bg-secondary: #1E1E1E; 
-    --color-text-main: #FFFFFFD9;   
+    --color-text-main: #FFFFFFD9; 
     --color-text-secondary: #9E9E9E;
     --color-accent: #ea580c; 
-	--color-accent-hover: #d24e0b;
+    --color-accent-hover: #d24e0b;
 }
 .light {
-	--color-bg-main: #f8fafc;
-	--color-bg-secondary: #f3f3f3;
-	--color-text-main: #0f172a;
-	--color-text-secondary: #64748b;
-	--color-accent: #02a118;
-	--color-accent-hover: #029014; 
+    --color-bg-main: #f8fafc;
+    --color-bg-secondary: #f3f3f3;
+    --color-text-main: #0f172a;
+    --color-text-secondary: #64748b;
+    --color-accent: #02a118;
+    --color-accent-hover: #029014; 
 }
 
 html {
-	transition:
-		background-color 0.3s,
-		color 0.3s;
-	scroll-behavior: smooth;
+    transition:
+        background-color 0.3s,
+        color 0.3s;
+    scroll-behavior: smooth;
 }
 
 @tailwind components;
 
 .focus-visible-ring:focus-visible {
-	outline: 2px solid var(--color-accent); 
-  outline-offset: 2px;
-  border-radius: 4px;
+    outline: 2px solid var(--color-accent); 
+    outline-offset: 2px;
+    border-radius: 4px;
 }
+
 
 .shadow-card {
     box-shadow: 
@@ -40,13 +39,14 @@ html {
         0 1px 4px rgba(0, 0, 0, 0.04);
 }
 
-root .shadow-card { 
+:root .shadow-card { 
     box-shadow: none; 
 }
 
+
 .hover-lift-glow {
     transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
-	transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .hover-lift-glow:hover,
@@ -64,9 +64,10 @@ root .shadow-card {
         0 0 0 3px var(--color-accent); 
 }
 
+
 .btn-interactive {
     transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
-	transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .btn-interactive:hover,
@@ -86,30 +87,6 @@ root .shadow-card {
     box-shadow: none; 
 }
 
-.link-nav {
-    position: relative;
-    color: var(--color-text-secondary);
-    transition: color 0.2s;
-}
-
-.link-nav:hover {
-    color: var(--color-text-main);
-}
-
-.link-nav::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--color-accent);
-    transition: width 0.3s ease;
-}
-
-.link-nav:hover::after {
-    width: 100%;
-}
 
 .link-nav {
     position: relative;
@@ -205,4 +182,5 @@ root .shadow-card {
     content: " ↗";
     font-size: 0.875rem;
 }
+
 @tailwind utilities;
