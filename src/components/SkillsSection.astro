@@ -1,0 +1,70 @@
+---
+import SkillCard from './SkillCard.svelte';
+import { skillsData } from '../data/skills.js';
+---
+
+<section class="mb-12">
+	<h2 class="text-2xl font-semibold text-accent mb-4">Skills & Technologies</h2>
+	
+	<!-- Programming Languages -->
+	<div class="mb-8">
+		<h3 class="text-lg font-semibold text-text-main mb-4">Programming Languages</h3>
+		<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+			{skillsData.programmingLanguages.map((skill) => (
+				<SkillCard 
+					name={skill.name} 
+					icon={skill.icon}
+					category="programming"
+					client:load
+				/>
+			))}
+		</div>
+	</div>
+
+	<!-- Statistics & ML -->
+	<div class="mb-8">
+		<h3 class="text-lg font-semibold text-text-main mb-4">Statistics & Machine Learning</h3>
+		<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+			{skillsData.statisticsML.map((skill) => (
+				<SkillCard 
+					name={skill.name} 
+					icon={skill.icon}
+					category="ml"
+					client:load
+				/>
+			))}
+		</div>
+	</div>
+
+	<!-- Tools -->
+	<div class="mb-8">
+		<h3 class="text-lg font-semibold text-text-main mb-4">Tools & Platforms</h3>
+		<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+			{skillsData.tools.map((skill) => (
+				<SkillCard 
+					name={skill.name} 
+					icon={skill.icon}
+					category="tools"
+					client:load
+				/>
+			))}
+		</div>
+	</div>
+
+	<!-- Regulatory Compliance -->
+	<div>
+		<h3 class="text-lg font-semibold text-text-main mb-4">Regulatory Compliance</h3>
+		<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+			{skillsData.compliance.map((skill) => (
+				<SkillCard 
+					name={skill.name} 
+					icon={skill.icon}
+					category="compliance"
+					client:load
+				/>
+			))}
+		</div>
+    </div>
+</section>
+
+    
