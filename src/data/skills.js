@@ -20,7 +20,6 @@ export const skillsData = {
 		{ name: 'Jupyter', icon: icons.jupyter },
 		{ name: 'VS Code', icon: icons.vscode },
 		{ name: 'Command Line', icon: icons.terminal },
-		{ name: 'Databases', icon: icons.database },
         { name: 'Git', icon: icons.git }
 	],
 	
