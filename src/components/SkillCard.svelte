@@ -4,7 +4,7 @@
 	export let category = '';
 </script>
 
-<div class="bg-bg-secondary p-6 rounded-lg shadow-card hover-lift-glow flex flex-col items-center justify-center text-center min-h-[160px] cursor-pointer">
+<div class="bg-bg-secondary p-6 rounded-lg shadow-card flex flex-col items-center justify-center text-center min-h-[160px]">
 	<div class="w-16 h-16 mb-3 text-accent flex items-center justify-center">
 		{@html icon}
 	</div>
