@@ -13,7 +13,7 @@ export const skillsData = {
 		{ name: 'Clustering', icon: icons.clustering },
 		{ name: 'Time Series', icon: icons.timeSeries },
 		{ name: 'Hypothesis Testing', icon: icons.hypothesis },
-		{ name: 'Neual Networks', icon: icons.deepLearning }
+		{ name: 'Neural Networks', icon: icons.deepLearning }
 	],
 	
 	tools: [
