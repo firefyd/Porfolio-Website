@@ -12,6 +12,22 @@ export async function getStaticPaths() {
 
 const { project } = Astro.props;
 const { Content } = await project.render();
+
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": project.data.title,
+  "description": project.data.description,
+  "url": Astro.url.href,
+  "datePublished": project.data.pubDate.toISOString(),
+  "author": {
+    "@type": "Person",
+    "name": "Joshua Phillips",
+    "url": "https://joshphillips.dev/about" // Assuming this is the correct URL
+  },
+  "keywords": (project.data.tags || []).join(', '), 
+};
 ---
 
 <BaseLayout
@@ -69,8 +85,6 @@ const { Content } = await project.render();
 			}
 		</header>
 
-		<!-- FIX: Explicitly setting the light mode text color using CSS variable notation.
-               This ensures text is dark on a light background, overriding any unwanted prose defaults. -->
 		<div class="prose max-w-none text-[var(--color-text-main)] dark:prose-invert">
 			<Content />
 		</div>
