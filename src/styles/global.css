@@ -167,20 +167,76 @@ html {
     transform: translateX(-4px);
 }
 
-.prose a {
-    color: var(--color-accent);
-    text-decoration: underline;
-    transition: color 0.2s, text-decoration 0.2s;
-}
+	.prose {
+		color: var(--color-text-main);
+	}
 
-.prose a:hover {
-    color: var(--color-accent-hover);
-    text-decoration: none;
-}
+	.prose h1,
+	.prose h2,
+	.prose h3,
+	.prose h4,
+	.prose h5,
+	.prose h6 {
+		color: var(--color-text-main);
+	}
 
-.prose a[target="_blank"]::after {
-    content: " ↗";
-    font-size: 0.875rem;
-}
+	.prose strong {
+		color: var(--color-text-main);
+	}
 
+	.prose code {
+		color: var(--color-text-main);
+		background-color: var(--color-bg-secondary);
+		padding: 0.2em 0.4em;
+		border-radius: 3px;
+		font-size: 0.9em;
+	}
+
+	.prose pre {
+		background-color: var(--color-bg-secondary);
+		border: 1px solid var(--color-border-main);
+	}
+
+	.prose pre code {
+		background-color: transparent;
+		padding: 0;
+	}
+
+	.prose a {
+		color: var(--color-accent);
+		text-decoration: underline;
+		transition: color 0.2s;
+	}
+
+	.prose a:hover {
+		color: var(--color-accent-hover);
+		text-decoration: none;
+	}
+
+	.prose blockquote {
+		border-left-color: var(--color-accent);
+		color: var(--color-text-secondary);
+	}
+
+	.prose hr {
+		border-color: var(--color-border-main);
+	}
+
+	.prose ul,
+	.prose ol {
+		color: var(--color-text-main);
+	}
+
+	.prose li {
+		color: var(--color-text-main);
+	}
+
+	.prose table {
+		border-color: var(--color-border-main);
+	}
+
+	.prose th,
+	.prose td {
+		border-color: var(--color-border-main);
+	}
 @tailwind utilities;
