@@ -6,23 +6,62 @@ pubDate: 2025-01-15
 tags: ["Web Development"]
 ---
 
-## The Project
+## Intro/Motivation
 
-Write the full project description in Markdown.
+## Tech Stack
 
-Include:
+- Core Framework
+    Astro
+- Styling
+    Tailwind
 
-- Code blocks
-- Images
-- Charts
-- ...
+- UI Framework
+    Svelte
+- Content
+    Markdown
+- Image Processing
+    Sharp (Astro Default)
+- Version Control
+    github
 
-### What I Learned
+## Architecture Design
+- Folder Structure
+src/ with components layouts pages content and styles
 
-...
+- Content management
+    Astro content collections with schemas for projects and dynamic routing
 
-### Tech Stack Details
+- Core components
+    Header, footer, baselayout, themetoggle, and secondary
 
-- **Framework:** Astro with Svelte islands
-- **Styling:** Tailwind CSS
-- **Deployment:** GitHub Pages
+- Pages
+    Home, Projects, about, content
+
+
+## Design 
+
+- Light dark mode
+    Robust variables to ensure ease of switching, auto detection of user preferences
+
+- Mobile width
+    Burger menu
+
+- Accesibility (WCAG)
+    Used WCAG friendly colour and contrast levels
+
+# Hosting and Optimisation
+- Deployment
+    Github
+
+- Custom Domain
+    Cloudflare based custom domain, DNS configuration, CNAME
+
+- SEO
+    Auto generate sitemap-index and robots.text
+
+-Analytics
+    Cloudflare web Analytics
+
+- Formspree
+    Use with env and honeypot variable
+
