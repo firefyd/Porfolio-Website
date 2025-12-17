@@ -9,19 +9,11 @@ pubDate: 2025-12-16
 
 ## Tech Stack
 
-- Core Framework
-    Astro
-- Styling
-    Tailwind
+I chose to use Astro as the JavaScript framework, its focus on good web fundamentals and design focus made it the most logical choice. 
+With Astro I used Tailwind for my CSS aand Svelte for core UI elements. I felt that these matched the efficiency and content focus of Astro. 
+I also stayed with the astro default of Sharp for image processing. 
 
-- UI Framework
-    Svelte
-- Content
-    Markdown
-- Image Processing
-    Sharp (Astro Default)
-- Version Control
-    github
+I have used Markdown to enable better content formatting for my projects and github for version control.
 
 ## Architecture Design
 - Folder Structure
@@ -36,17 +28,17 @@ src/ with components layouts pages content and styles
 - Pages
     Home, Projects, about, content
 
-
 ## Design 
 
-- Light dark mode
-    Robust variables to ensure ease of switching, auto detection of user preferences
+The primary focus of my design decision making has been ensuring that content is easy to engage with while meeting Accesibility standards. 
+To these ends I have attempted to adhere to the Web Content Accesibility Guidelines (WCAG) especially with regards to colour choices and contrast levels of content to the background.
 
-- Mobile width
-    Burger menu
+Website width has been kept narrow for desktop viewers to allow consistent experience between different screen sizes. 
+Content also automatically adjusts for mobile devices and the top navigation menu switches to a more appropriate burger menu.
 
-- Accesibility (WCAG)
-    Used WCAG friendly colour and contrast levels
+I have also implemented light and dark themes to accommodate user preferences. 
+Tailwind variables have been established so that when a selection is made content switches theming automatically. I have also implemented detection of device defaults so minimal user setting is required.
+
 
 # Hosting and Optimisation
 - Deployment
